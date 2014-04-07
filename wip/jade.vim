@@ -3,7 +3,7 @@ if !exists("g:JadeCompiler")
   let g:JadeCompiler = 'jade -c'
 endif
 if !exists("g:JadeHtmlCompiler")
-  let g:JadeHtmlCompiler = 'jade -P'
+let g:JadeHtmlCompiler = 'jade -P'
 endif
 let s:filetype = "js"
 
@@ -33,9 +33,9 @@ function! s:JadeCompileUpdate(startline, endline)
     return
   endif
 
-  if s:filetype = 'js'
+  if s:filetype == "js"
     let compiler = g:JadeCompiler
-  elseif s:filetype = 'html'
+  elseif s:filetype == "html"
     let compiler = g:JadeHtmlCompiler
   endif
 
@@ -58,9 +58,9 @@ function! s:JadeCompileUpdate(startline, endline)
   " Highlight as JavaScript/html if there is no compile error.
   if v:shell_error
     setlocal filetype=
-  elseif s:filetype = "js"
+  elseif s:filetype == "js"
     setlocal filetype=javascript
-  elseif s:filetype = "html"
+  elseif s:filetype =="html"
     setlocal filetype=html
   endif
 
@@ -86,9 +86,9 @@ function! s:JadeCompile(startline, endline, args)
   " Parse arguments.
   let size = str2nr(matchstr(a:args, '\<\d\+\>'))
   if a:args =~ '\<html\>'
-    s:filetype = "html"
+    let s:filetype = "html"
   else
-    s:filetype = "js"
+    let s:filetype = "js"
   endif
 
   " Determine default split direction.
