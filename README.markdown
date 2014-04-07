@@ -4,8 +4,6 @@ Full-featured Vim plugin for Jade
 
 This is a fork of https://github.com/digitaltoad/vim-jade.git
 
-Full-featured Vim plugin for Jade
-
 Installation
 ------------
 
