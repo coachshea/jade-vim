@@ -30,6 +30,8 @@ The vert[ical] option wil show the display window in a vertical split.
 
 The N option is a number which represents the size of the window.
 
+Once a preview window is opened, it will automatically update on InsertLeave and on BufWritePost
+
 The default complilers can be set with these options:
 
     :let g:JadeCompiler="myfavoritecompiler"
