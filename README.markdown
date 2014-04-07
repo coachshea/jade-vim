@@ -32,11 +32,11 @@ The N option is a number which represents the size of the window.
 
 The default complilers can be set with these options:
 
-  :let g:JadeCompiler="myfavoritecompiler"
-  :let g:JadeHtmlCompiler="myfavoriteHTMLcompiler"
+    :let g:JadeCompiler="myfavoritecompiler"
+    :let g:JadeHtmlCompiler="myfavoriteHTMLcompiler"
 
 For convenience, it is recommended that shortcuts to your favorite options are set in you .vimrc file.
 For example:
 
-  au FILETYPE jade nnoremap <buffer> <LocalLeader>h :JadeWatch html vert<CR>
-  au FILETYPE jade nnoremap <buffer> <LocalLeader>j :JadeWatch vert<CR>
+    au FILETYPE jade nnoremap <buffer> <LocalLeader>h :JadeWatch html vert<CR>
+    au FILETYPE jade nnoremap <buffer> <LocalLeader>j :JadeWatch vert<CR>
