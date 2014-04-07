@@ -22,9 +22,8 @@ the contents of the source directory to the directory of the same name in your
 
 To view the compiled jade in a preview window use the JadeWatch command
 
-```
   :JadeWatch [html] [vert[ical]] [N]
-```
+
 The html option will show the output as html as opposed to the default javascript.
 
 The vert[ical] option wil show the display window in a vertical split.
@@ -33,14 +32,11 @@ The N option is a number which represents the size of the window.
 
 The default complilers can be set with these options:
 
-```
   :let g:JadeCompiler="myfavoritecompiler"
   :let g:JadeHtmlCompiler="myfavoriteHTMLcompiler"
-```
+
 For convenience, it is recommended that shortcuts to your favorite options are set in you .vimrc file.
 For example:
-```
+
   au FILETYPE jade nnoremap <buffer> <LocalLeader>h :JadeWatch html vert<CR>
   au FILETYPE jade nnoremap <buffer> <LocalLeader>j :JadeWatch vert<CR>
-```
-
