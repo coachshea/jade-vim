@@ -22,7 +22,7 @@ the contents of the source directory to the directory of the same name in your
 
 To view the compiled jade in a preview window use the JadeWatch command
 
-  :JadeWatch [html] [vert[ical]] [N]
+    :JadeWatch [html] [vert[ical]] [N]
 
 The html option will show the output as html as opposed to the default javascript.
 
