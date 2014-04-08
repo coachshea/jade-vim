@@ -32,12 +32,18 @@ The N option is a number which represents the size of the window.
 
 Once a preview window is opened, it will automatically update on InsertLeave and on BufWritePost
 
+For convenience, it is recommended that shortcuts to your favorite options are set in you .vimrc file.
+For example:
+
+    au FILETYPE jade nnoremap <buffer> <LocalLeader>h :JadeWatch html vert<CR>
+    au FILETYPE jade nnoremap <buffer> <LocalLeader>j :JadeWatch vert<CR>
+
 The default complilers can be set with these options:
 
     :let g:JadeCompiler="myfavoritecompiler"
     :let g:JadeHtmlCompiler="myfavoriteHTMLcompiler"
     
-Many people use [clientjade](https://github.com/jgallen23/clientjade.git) to compile there front-end jade templates. Unfortunately, clientjade does not allow for compilation from stdin and, therefore, does not play nice with this plugin.  I have create a fork of clientjade called [jadeclient](https://github.com/coachshea/jadeclient.git), which is a superset of clientjade.  You can just as you've used clientjade and get the exact same results.  However, it has one additional option "-s" or "--stdin" which allows for reading over stdin.  For example:
+Many people use [clientjade](https://github.com/jgallen23/clientjade.git) to compile their front-end jade templates. Unfortunately, clientjade does not allow for compilation from stdin and, therefore, does not play nice with this plugin.  I have create a fork of clientjade called [jadeclient](https://github.com/coachshea/jadeclient.git), which is a superset of clientjade.  You can  use it just as you've used clientjade and get the exact same results.  However, it has one additional option "-s" or "--stdin" which allows for reading over stdin.  For example:
 
     $echo "h1 hello" | jadeclient -s
 
@@ -47,10 +53,5 @@ To use jadeclient with vim-jade simple type the following command (assuming a gl
 
 This is, of course, not suited for production as every function will be named "buffer", however it will allow you to quickly see what the compiled javascript (minus the function name) will look like.
 
-If you are someone who used jadeclient/clientjade frequently, be sure to set the global variable in you .vimrc to same time.
+If you are someone who uses jadeclient/clientjade frequently, be sure to set the global variable in your .vimrc to same time.
 
-For convenience, it is recommended that shortcuts to your favorite options are set in you .vimrc file.
-For example:
-
-    au FILETYPE jade nnoremap <buffer> <LocalLeader>h :JadeWatch html vert<CR>
-    au FILETYPE jade nnoremap <buffer> <LocalLeader>j :JadeWatch vert<CR>
