@@ -104,6 +104,7 @@ function! s:JadeCompileUpdate(startline, endline)
   setlocal modifiable
     exec '% delete _'
     put! =output
+    normal! gg=G
     exec '$ delete _'
   setlocal nomodifiable
 
