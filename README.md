@@ -47,6 +47,16 @@ Many people use [clientjade](https://github.com/jgallen23/clientjade.git) to com
 
     $echo "h1 hello" | jadeclient -s
 
+    jade.templates["buffer"] = function(locals, attrs, escape, rethrow, merge) {
+    attrs = attrs || jade.attrs; escape = escape || jade.escape; rethrow = rethrow || jade.rethrow; merge = merge || jade.merge;
+    var buf = [];
+    with (locals || {}) {
+    var interp;
+    buf.push('<hello></hello>');
+    }
+    return buf.join("");
+    }
+
 To use jadeclient with vim-jade simple type the following command (assuming a global install, although it will work with a local install as well):
 
     :let g:JadeCompiler="jadeclinet -s"
