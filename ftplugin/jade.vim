@@ -1,7 +1,7 @@
 " Vim filetype plugin
 " Language: Jade
-" Maintainer: Joshua Borton
-" Credits: Tim Pope
+" Maintainer: John Shea
+" Credits: Joshua Borton, Tim Pope
 
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin")

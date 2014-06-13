@@ -63,5 +63,5 @@ To use jadeclient with vim-jade simple type the following command (assuming a gl
 
 This is, of course, not suited for production as every function will be named "buffer", however it will allow you to quickly see what the compiled javascript (minus the function name) will look like.
 
-If you are someone who uses jadeclient/clientjade frequently, be sure to set the global variable in your .vimrc to same time.
+If you are someone who uses jadeclient/clientjade frequently, be sure to set the global variable in your .vimrc to save time.
 
