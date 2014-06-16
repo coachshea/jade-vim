@@ -1,5 +1,4 @@
-" Vim filetype plugin
-" Language: Jade
+" Vim filetype plugin " Language: Jade
 " Maintainer: John Shea
 " Credits: Joshua Borton, Tim Pope
 
@@ -193,8 +192,7 @@ function! s:JadeCompile(startline, endline, args)
   call s:JadeCompileWatchUpdate()
 
   augroup JadeCompileAuWatch
-    autocmd InsertLeave <buffer> call s:JadeCompileWatchUpdate()
-    autocmd BufWritePost <buffer> call s:JadeCompileWatchUpdate()
+    autocmd InsertLeave,BufWritePost <buffer> call s:JadeCompileWatchUpdate()
   augroup END
 endfunction
 
@@ -211,5 +209,3 @@ command! -range=% -bar -nargs=* JadeWatch call s:JadeCompile(<line1>, <line2>, <
 "command! -range=% -bar JadeJs <line1>,<line2>:w !jade -c
 
 let &cpo = s:save_cpo
-
-" vim:set sw=2:
